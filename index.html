@@ -23,7 +23,9 @@
 
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
-</head>
+
+  
+  </head>
 
 <body>
 
@@ -279,7 +281,7 @@
           <p>Ready to take the first step towards optimal health? Book your appointment now. Our friendly staff is eager to assist you in selecting a convenient date and time for your visit. Experience personalized care that puts your well-being first.</p>
         </div>
 
-        <form accept="" role="form" class="php-email-form">
+        <!-- <form role="form" class="php-email-form">
           <div class="row">
             <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
@@ -318,10 +320,17 @@
           </div>
 
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message (Optional)"></textarea>
             
           </div>
           <div class="text-center"><button type="submit">Make an Appointment</button></div>
+        </form> -->
+
+        <form action="https://formsubmit.co/el/confirm/a1b80806928660d7dba8c40e77a7a2cf" method="POST" id="contact-form">
+          <input type="text" id="name" name="name" placeholder="Name" required>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <textarea id="message" name="message" placeholder="Message" required></textarea>
+          <button type="submit">Submit</button>
         </form>
 
       </div>
@@ -541,9 +550,20 @@
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
 
+  <!-- Sending Mails -->
+  <script src="js/mail.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("OENApnu78qsGK4qTG");
+    })();
+  </script>
+
   <!-- Talkto -->
   <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+  <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   (function(){
   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
